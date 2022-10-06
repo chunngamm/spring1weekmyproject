@@ -57,5 +57,3 @@ Timestamped : 시간 상속 하기
 	4. 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service) =>그렇지만도 아닌거 같습니다.
 	5. 작성한 코드에서 빈(Bean)을 모두 찾아보세요! =>controller, repository,service
 	6. API 명세서 작성 가이드라인을 검색하여 직접 작성한 명세서와 비교해보세요! => 많이 좋지는 않네요
-	
-![image](https://user-images.githubusercontent.com/43533141/194229684-0f06202d-ab8d-40fa-b051-4d9c05b3bf2f.png)
