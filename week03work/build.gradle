@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.4'
+	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+	id 'java'
+}
+
+group = 'com.sparta'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//주석 달아보기
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //스프링부트를 사용할수 있도록 해주는 것
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 스프링부트를 사용할수 있도록 해주는 것
+//	implementation 'org.springframework.boot:spring-boot-devtools:2.7.4' // 스프링부트를 사용할수 있도록 해주는 것
+//	implementation 'org.json:json:20220924' // json을 사용할수 있도록 해주는 것
+	compileOnly 'org.projectlombok:lombok' //lombok 사용할수 있도록 해주는 것
+	runtimeOnly 'com.h2database:h2' //h2 database 사용할 수 있도록 해주는 것
+	runtimeOnly 'mysql:mysql-connector-java' // mysql을 자바로 "jpa 사용" 가능하게 해주는 것
+	annotationProcessor 'org.projectlombok:lombok' //롬복 어노테이션이 사용 가능해진다.
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'// 스프링부트를 테스트 할수 있게 해준다.
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
